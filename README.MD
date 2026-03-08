@@ -37,9 +37,9 @@ GeoChat is a robust, feature-rich cross-platform mobile application designed for
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/GeoChat.git
+   git clone https://github.com/maduminu/GeoChat.git
    ```
-
+ 
 2. **Install dependencies**:
    ```bash
    npm install
@@ -56,4 +56,20 @@ GeoChat is a robust, feature-rich cross-platform mobile application designed for
      ```
 
 ---
-Built with ❤️ for real-time community engagement.
+### Assets & Credits
+
+Some animations used in this project are from LottieFiles (https://lottiefiles.com)
+
+Licensed under the Lottie Simple License
+
+All animation rights belong to their respective creators.
+
+
+### This is the improve version of GeoChat that i built 2 years ago. if you want to see the old version, you can find a youtube video of it.
+
+**this is my yotube channel link:-** https://youtu.be/rhYBYWdRIH0
+
+### Before running the app, make sure to update the API_BASE_URL in the config.js file with your local IP address. and change the database to your local database.
+
+## Built with ❤️ for real-time community engagement.
+

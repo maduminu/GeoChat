@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.geochat.app-mergeDebugResources-31:/values-ldltr-v21/values-ldltr-v21.xml",
+            "outputFile": "com.geochat.app-mergeDebugResources-28:/values-ldltr-v21/values-ldltr-v21.xml",
             "map": [
                 {
-                    "source": "/Users/madushanminuwantha/.gradle/caches/transforms-3/2a4aae05575dd0fe5825b93a559ca16a/transformed/appcompat-1.4.2/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "source": "/Users/madushanminuwantha/.gradle/caches/transforms-3/0719b87c056b907d84ca9a0c40cc4291/transformed/appcompat-1.4.1/res/values-ldltr-v21/values-ldltr-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

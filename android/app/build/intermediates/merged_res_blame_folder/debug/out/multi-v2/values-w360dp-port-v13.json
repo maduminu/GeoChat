@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.geochat.app-mergeDebugResources-31:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+            "outputFile": "com.geochat.app-mergeDebugResources-28:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/Users/madushanminuwantha/.gradle/caches/transforms-3/3743cca3f372879acac4a9c0d0747224/transformed/material-1.6.1/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+                    "source": "/Users/madushanminuwantha/.gradle/caches/transforms-3/c20482aa656a8f35781a177390b7232d/transformed/material-1.1.0/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
