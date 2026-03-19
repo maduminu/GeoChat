@@ -33,6 +33,72 @@ GeoChat is a robust, feature-rich cross-platform mobile application designed for
 - **Animations**: [Lottie](https://airbnb.io/lottie/) & [React Native Animatable](https://github.com/oblador/react-native-animatable)
 - **Utilities**: React Native Vector Icons, Image Picker, Select Dropdown
 
+## 🗄️ Database Schema
+
+GeoChat utilizes a **MySQL** database with a relational schema designed to support real-time chat, group interactions, and social media features.
+
+### 🗺️ Entity Relationship Diagram
+
+```mermaid
+erDiagram
+    user ||--o{ friends : "has interactions"
+    user ||--o{ chat : "sends/receives"
+    user ||--o{ group_user : "belongs to"
+    user ||--o{ group : "creates"
+    user ||--o{ post : "is author of"
+    user ||--o{ post_msg : "comments on"
+    user ||--o{ post_status : "reacts with"
+    country ||--o{ user : "is location of"
+    status ||--o{ chat : "defines state of"
+    status ||--o{ group_chat : "defines state of"
+    group ||--o{ group_chat : "contains"
+    group ||--o{ group_user : "includes"
+    post ||--o{ post_msg : "has comments"
+    post ||--o{ post_status : "has reactions"
+    post_status_type ||--o{ post_status : "defines type of"
+
+    user {
+        int id PK
+        string name
+        string mobile
+        string profile_url
+        int country_id FK
+    }
+    friends {
+        int id PK
+        int from_user_id FK
+        int to_user_id FK
+        datetime date_time
+    }
+    chat {
+        int id PK
+        int user_from_id FK
+        int user_to_id FK
+        text massage
+        int status_id FK
+    }
+    group {
+        int id PK
+        string name
+        int group_create_user_id FK
+    }
+    post {
+        int id PK
+        string pic_url
+        int user_id FK
+    }
+```
+
+### 📋 Key Tables Explained
+
+- **`user`**: Stores core user identity, credentials, and profile details.
+- **`friends`**: **Important Note** — Despite its name, this table functions as a **Conversation History** tracker. It records unique user-to-user interactions and updates the `date_time` (timestamp) whenever a new message is exchanged, allowing the app to sort the personal chat list by recent activity.
+- **`chat`**: The primary table for one-on-one messages, including the message content and delivery status.
+- **`group` & `group_user`**: Manages group chat metadata and multi-user memberships.
+- **`post`**: Contains user-generated social feed items, including image URLs and timestamps.
+- **`post_status` & `post_status_type`**: Tracks reactions (Like, Love, etc.) on posts.
+- **`country`**: A reference table for internationalized user profiles.
+
 ## 🏁 Getting Started
 
 1. **Clone the repository**:
